@@ -25,7 +25,7 @@ class MetaMaskPage:
             driver=self.driver, by=input_loc[0], value=input_loc[1]
         )
 
-        input.send_keys("DogDog214")
+        input.send_keys("YourPassword")
 
         unlock_btn_loc = By.XPATH, "//button[text()='Unlock']"
         unlock_btn = BaseElement(
