@@ -12,15 +12,15 @@ from mmask_page import MetaMaskPage
 # This is the Chrome Script going to be using Heco Network.
 
 # variables
-sheet = GoogleSheet("CryptoBlades-April-2022")
+sheet = GoogleSheet("Your Google Sheet")
 net_row = 2
 skill_row = 209
 col = 0
 net = 0
 skill_net = 0
 accounts_list = [
-    'Sunskier', 'Chobo', 'Avenger', 'Sappy', 'Chelsea',
-    'Hobbes', 'Mario', 'Kit', 'Amber'
+    'Account 3', 'Account 4', 'Account 5', 'Account 6', 'Account 7',
+    'Account 8', 'Account 9', 'Account 10', 'Account 11'
     ]
 net_row_list = [7, 12, 17, 22, 27, 32, 37, 42, 47]
 skill_row_list = [214, 219, 224, 229, 234, 239, 244, 249, 254]
