@@ -1,3 +1,4 @@
+import time
 from base_element import BaseElement
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
@@ -8,12 +9,16 @@ class MetaMaskPage:
     def __init__(self, driver):
         self.driver = driver
 
-    def get_gas_amount(self):
-        spans = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_all_elements_located((By.CSS_SELECTOR, "span[class='currency-display-component__text']"))
+    def confirm(self):
+        confirm_btn_loc = By.XPATH, "//button[text()='Confirm']"
+        confirm_btn = BaseElement(
+            driver=self.driver, by=confirm_btn_loc[0], value=confirm_btn_loc[1]
         )
 
-        gas_text = spans[0].get_attribute('textContent')
+        confirm_btn.click()
+
+    def get_gas_amount(self):
+        gas_text = (str(self.driver.execute_script(open("gas.js").read())))
         gas = float(gas_text)
 
         return gas
@@ -25,7 +30,7 @@ class MetaMaskPage:
             driver=self.driver, by=input_loc[0], value=input_loc[1]
         )
 
-        input.send_keys("YourPassword")
+        input.send_keys("DogDog214")
 
         unlock_btn_loc = By.XPATH, "//button[text()='Unlock']"
         unlock_btn = BaseElement(
