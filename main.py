@@ -19,8 +19,8 @@ col = 0
 net = 0
 skill_net = 0
 accounts_list = [
-    'Account 3', 'Account 4', 'Account 5', 'Account 6', 'Account 7',
-    'Account 8', 'Account 9', 'Account 10', 'Account 11'
+    'Account 2', 'Account 3', 'Account 4', 'Account 5', 'Account 6',
+    'Account 7', 'Account 8', 'Account 9', 'Account 10'
     ]
 net_row_list = [7, 12, 17, 22, 27, 32, 37, 42, 47]
 skill_row_list = [214, 219, 224, 229, 234, 239, 244, 249, 254]
@@ -28,10 +28,10 @@ skill_row_list = [214, 219, 224, 229, 234, 239, 244, 249, 254]
 chrome_options = Options()
 chrome_options.add_argument('--profile-directory=Profile 1')
 chrome_options.add_argument(
-    f"user-data-dir=C:\\Users\\MarkS\\CryptoChromeProfiles\\CryptoBladesHeco"
+    f"path\\to\\your\\chrome\\profile"
     )
 exe_path = Service(
-    'E:\PythonProjects\CryptoBladesDball\drivers\Version 99\chromedriver.exe'
+    'path\of\your\chromedriver'
     )
 driver = webdriver.Chrome(options=chrome_options, service=exe_path)
 
